@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Resume</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript" src="js/load.js"></script>
+</head>
+
+<script type="text/javascript">
+   
+</script>
+
+<body onclick="editable();">
+    <div class="loading">
+        <p id="load"></p>
+    </div>
+    <div id="data">
+        <p id="start">
+            <script type="text/javascript">
+                toptext();
+
+            </script>
+        </p>
+        <p id="command">
+            <script type="text/javascript">
+                codetext();
+
+            </script>
+        </p>
+        <p id="editable" contenteditable="true" onkeyup="giveninput(event)"></p>
+        <script type="text/javascript">
+            editable();
+
+        </script>
+
+    </div>
+</body>
+
+</html>
