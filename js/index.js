@@ -1,6 +1,8 @@
+"use strict";
+
 function toptext() {
 
-    var header = "Please take a minute to check out my GitHub.<br>";
+    var header = "John Doe<br>";
     header = header + "GitHub: <a href='https://github.com/skyroor'>Skyroor</a><br>";
 
     document.getElementById("start").innerHTML = header;
@@ -16,7 +18,7 @@ function codetext() {
 }
 
 function giveninput(event) {
-    if (event.which == 13 || event.keyCode == 13) {
+    if (event.which === 13 || event.keyCode === 13) {
         var topdata = document.getElementById("start").innerHTML + document.getElementById("command").innerHTML;
         var getresultfor = document.getElementById("editable").innerText;
         getresultfor = getresultfor.slice(0, -2);
@@ -28,35 +30,46 @@ function giveninput(event) {
     }
 }
 
+function showresult(insertdata) {
+    var topdata = document.getElementById("start").innerHTML;
+    document.getElementById("start").innerHTML = topdata + insertdata;
+}
+
 function insertresult(result) {
     switch (result) {
         case "--help":
             {
                 var insertdata = "github contact reset book blog skills pdf worddoc --help<br>";
-                var topdata = document.getElementById("start").innerHTML;
-                document.getElementById("start").innerHTML = topdata + insertdata;
+                showresult(insertdata);
                 break;
             }
+
+        case "exp":
+            {
+                var insertdata = "[2016 - Present] IT Consultant / Web Designer<br>";
+                var insertdata = insertdata + "[2015 - Present] Studying for degree in Computer Science.<br>";
+                showresult(insertdata);
+                break;
+            }
+
         case "what is your quest?":
             {
                 var insertdata = "To seek the Holy Grail!<br>"
-                var topdata = document.getElementById("start").innerHTML;
-                document.getElementById("start").innerHTML = topdata + insertdata;
+                showresult(insertdata);
                 break;
             }
-        
+
         case "button":
             {
-                var topdata = document.getElementById("start").innerHTML;
-                document.getElementById("start").innerHTML = topdata + "<button type='button' class='btn btn-primary'>Oh shit boi</button><br>";
+                var insertdata = "<button type='button' class='btn btn-primary'>Oh shit boi</button><br>";
+                showresult(insertdata);
                 break;
             }
-            
+
         default:
             {
-                var insertdata = result + ": command not found.<br>";
-                var topdata = document.getElementById("start").innerHTML;
-                document.getElementById("start").innerHTML = topdata + insertdata;
+                var error = result + ": command not found.<br>";
+                showresult(error);
             }
     }
 }
