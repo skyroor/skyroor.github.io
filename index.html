@@ -17,21 +17,23 @@
     <div class="loading">
         <p id="load"></p>
     </div>
-    <div id="data">
-        <p id="start">
+    <div class="terminal">
+        <div id="data">
+            <p id="start">
+                <script type="text/javascript">
+                    toptext();
+                </script>
+            </p>
+            <p id="command">
+                <script type="text/javascript">
+                    codetext();
+                </script>
+            </p>
+            <p id="editable" contenteditable="true" onkeyup="giveninput(event)"></p>
             <script type="text/javascript">
-                toptext();
+                editable();
             </script>
-        </p>
-        <p id="command">
-            <script type="text/javascript">
-                codetext();
-            </script>
-        </p>
-        <p id="editable" contenteditable="true" onkeyup="giveninput(event)"></p>
-        <script type="text/javascript">
-            editable();
-        </script>
+        </div>
     </div>
 </body>
 
