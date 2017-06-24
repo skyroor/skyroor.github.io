@@ -2,7 +2,7 @@
 
 function toptext() {
 
-    var header = "John Doe<br>";
+    var header = "Sky Roor<br>";
     header = header + "GitHub: <a href='https://github.com/skyroor'>Skyroor</a><br>";
 
     document.getElementById("start").innerHTML = header;
