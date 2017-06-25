@@ -1,5 +1,10 @@
 "use strict";
 
+function closeTerminal() {
+    var elem = document.getElementById("draggable");
+    elem.remove();
+}
+
 function toptext() {
 
     var header = "Sky Roor<br>";
@@ -65,6 +70,18 @@ function insertresult(result) {
                 showresult(insertdata);
                 break;
             }
+
+        case "":
+            {
+                break;
+            }
+
+        case "reset":
+            {
+                toptext();
+                break;
+            }
+
 
         default:
             {
