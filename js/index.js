@@ -19,7 +19,7 @@ function editable() {
 }
 
 function codetext() {
-    document.getElementById("command").innerHTML = "<p class='important'>visitor@griffco</p>:~ $";
+    document.getElementById("command").innerHTML = "<p class='important'>usr@skyroor</p>:~ $";
 }
 
 function giveninput(event) {
